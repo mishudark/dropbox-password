@@ -7,7 +7,7 @@ Securely stores your passwords as Dropbox do
 
 ##Encrypt a password
 The function needs two arguments, `plaintext password` and the `masterkey`
-```
+```go
   package main
   
   import "github.com/mishudark/dropbox-password"
@@ -20,7 +20,7 @@ The function needs two arguments, `plaintext password` and the `masterkey`
 ##Check if a password is valid
 The function needs three arguments , `plaintext password`, `hashed password` and `masterkey`
 
-```
+```go
   package main
   
   import "github.com/mishudark/dropbox-password"
