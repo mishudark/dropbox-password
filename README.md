@@ -26,7 +26,7 @@ The function needs three arguments , `plaintext password`, `hashed password` and
   import "github.com/mishudark/dropbox-password"
   
   func main() {
-    ok := IsValid("mishudark", "aes256$mh68GJ7t9mLYiJKk$7ab2234944dabe98d...", "AES256Key-32Characters1234567890")
+    ok := password.IsValid("mishudark", "aes256$mh68GJ7t9mLYiJKk$7ab2234944dabe98d...", "AES256Key-32Characters1234567890")
   }
 ```
 
