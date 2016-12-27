@@ -6,7 +6,7 @@ Securely stores your passwords as Dropbox do
 `go get github.com/mishudark/dropbox-password`
 
 ##Encrypt a password
-The function needs two arguments, `plaintext password` and the `masterkey` remember should have `32 chars length`
+The function needs two arguments, `plaintext password` and a **32 chars length** `masterkey`
 ```go
   package main
   
