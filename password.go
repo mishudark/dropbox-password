@@ -86,9 +86,5 @@ func IsValid(password, hash, masterKey string) bool {
 	}
 
 	hash512 := sha512.Sum512([]byte(password))
-	if err = bcrypt.CompareHashAndPassword(plaintext, hash512[:]); err != nil {
-		return false
-	}
-
-	return true
+	return bcrypt.CompareHashAndPassword(plaintext, hash512[:]) == nil
 }
