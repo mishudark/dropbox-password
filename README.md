@@ -1,11 +1,11 @@
 # dropbox-password
 Securely stores your passwords as Dropbox do
 
-##Get the library
+## Get the library
 
 `go get github.com/mishudark/dropbox-password`
 
-##Encrypt a password
+## Encrypt a password
 The function needs two arguments, `plaintext password` and a **32 chars length** `masterkey`
 ```go
   package main
@@ -17,7 +17,7 @@ The function needs two arguments, `plaintext password` and a **32 chars length**
   }
 ```
 
-##Check if a password is valid
+## Check if a password is valid
 The function needs three arguments , `plaintext password`, `hashed password` and `masterkey`
 
 ```go
@@ -32,11 +32,9 @@ The function needs three arguments , `plaintext password`, `hashed password` and
   }
 ```
 
-###Details of implementation
+### Details of implementation
 
-![Image of dropbox]
-(https://dropboxtechblog.files.wordpress.com/2016/09/layers.png?w=650&h=443)
-
+![Image of dropbox](https://dropboxtechblog.files.wordpress.com/2016/09/layers.png?w=650&h=443)
 
 It’s universally acknowledged that it’s a bad idea to store plain-text passwords. If a database containing plain-text passwords is compromised, user accounts are in immediate danger. For this reason, as early as 1976, the industry standardized on storing passwords using secure, one-way hashing mechanisms (starting with Unix Crypt). Unfortunately, while this prevents the direct reading of passwords in case of a compromise, all hashing mechanisms necessarily allow attackers to brute force the hash offline, by going through lists of possible passwords, hashing them, and comparing the result. In this context, secure hashing functions like SHA have a critical flaw for password hashing: they are designed to be fast. A modern commodity CPU can generate millions of SHA256 hashes per second. Specialized GPU clusters allow for calculating hashes at a rate of billions per second.
 
